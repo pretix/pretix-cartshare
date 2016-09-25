@@ -18,3 +18,9 @@ pretix plugin that allows you to prepare a cart and share it with a customer.
 4. Execute ``python setup.py develop`` within this directory to register this application with pretix's plugin registry.
 
 5. Restart your local pretix server. You can now use the plugins from this repository for your events!
+
+## License
+
+Copyright 2016 Raphael Michel
+
+Released under the terms of the Apache License 2.0
