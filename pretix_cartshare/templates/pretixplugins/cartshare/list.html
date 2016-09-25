@@ -1,0 +1,57 @@
+{% extends "pretixcontrol/items/base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Shared carts" %}{% endblock %}
+
+{% block inside %}
+    <h1>{% trans "Shared carts" %}</h1>
+
+    {% if applications|length == 0 %}
+        <div class="empty-collection">
+            <p>
+                {% trans "No shared carts found." %}
+            </p>
+
+            <a href="{% url "plugins:pretix_cartshare:create" organizer=request.event.organizer.slug event=request.event.slug %}"
+                    class="btn btn-primary btn-lg"><i class="fa fa-plus"></i> {% trans "Share a cart" %}</a>
+        </div>
+    {% else %}
+        <p>
+            <a href="{% url "plugins:pretix_cartshare:create" organizer=request.event.organizer.slug event=request.event.slug %}" class="btn
+btn-default"><i class="fa fa-plus"></i> {% trans "Share a new cart" %}
+            </a>
+        </p>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                <tr>
+                    <th>{% trans "Cart ID" %}</th>
+                    <th>{% trans "Total" %}</th>
+                    <th>{% trans "Created" %}</th>
+                    <th>{% trans "Expires" %}</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for cart in carts %}
+                    <tr>
+                        <td>
+                            {{ cart.cart_id }}
+                        </td>
+                        <td>{{ cart.total|floatformat:2 }}</td>
+                        <td>{{ cart.datetime|date:"SHORT_DATE_FORMAT" }}</td>
+                        <td>{{ cart.expires|date:"SHORT_DATE_FORMAT" }}</td>
+                        <td>
+                            <a class="btn btn-danger">
+                                <span class="fa fa-delete"></span>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+    {% include "pretixcontrol/pagination.html" %}
+
+{% endblock %}
