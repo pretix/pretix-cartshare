@@ -1,0 +1,3 @@
+recursive-include pretix_cartshare/static *
+recursive-include pretix_cartshare/templates *
+recursive-include pretix_cartshare/locale *
