@@ -15,7 +15,7 @@ class SharedCart(models.Model):
         verbose_name=_("Event")
     )
     cart_id = models.CharField(
-        max_length=255, default=get_random_string,
+        max_length=255, default=generate_cart_id,
         verbose_name=_("Cart ID")
     )
     datetime = models.DateTimeField(

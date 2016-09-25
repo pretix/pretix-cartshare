@@ -6,7 +6,7 @@
 {% block inside %}
     <h1>{% trans "Shared carts" %}</h1>
 
-    {% if applications|length == 0 %}
+    {% if carts|length == 0 %}
         <div class="empty-collection">
             <p>
                 {% trans "No shared carts found." %}
@@ -43,7 +43,7 @@ btn-default"><i class="fa fa-plus"></i> {% trans "Share a new cart" %}
                         <td>{{ cart.expires|date:"SHORT_DATE_FORMAT" }}</td>
                         <td>
                             <a class="btn btn-danger">
-                                <span class="fa fa-delete"></span>
+                                <span class="fa fa-trash"></span>
                             </a>
                         </td>
                     </tr>
