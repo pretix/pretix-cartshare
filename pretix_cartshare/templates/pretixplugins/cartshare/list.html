@@ -1,9 +1,10 @@
 {% extends "pretixcontrol/items/base.html" %}
 {% load i18n %}
+{% load eventurl %}
 
 {% block title %}{% trans "Shared carts" %}{% endblock %}
 
-{% block inside %}
+{% block content %}
     <h1>{% trans "Shared carts" %}</h1>
 
     {% if carts|length == 0 %}
@@ -36,13 +37,16 @@ btn-default"><i class="fa fa-plus"></i> {% trans "Share a new cart" %}
                 {% for cart in carts %}
                     <tr>
                         <td>
-                            {{ cart.cart_id }}
+                            <a href="{% eventurl request.event "plugins:pretix_cartshare:redeem" id=cart.cart_id %}"
+                                    target="_blank">
+                                {{ cart.cart_id }}
+                            </a>
                         </td>
                         <td>{{ cart.total|floatformat:2 }}</td>
                         <td>{{ cart.datetime|date:"SHORT_DATE_FORMAT" }}</td>
                         <td>{{ cart.expires|date:"SHORT_DATE_FORMAT" }}</td>
                         <td>
-                            <a class="btn btn-danger">
+                            <a class="btn btn-danger" href="{% url "plugins:pretix_cartshare:delete" event=request.event.slug organizer=request.event.organizer.slug id=cart.cart_id %}">
                                 <span class="fa fa-trash"></span>
                             </a>
                         </td>

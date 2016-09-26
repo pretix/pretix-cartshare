@@ -4,18 +4,25 @@ from datetime import timedelta
 from django.contrib import messages
 from django.core.urlresolvers import reverse
 from django.db import transaction
+from django.http import Http404
+from django.http import HttpResponseRedirect
+from django.utils.decorators import method_decorator
 from django.utils.functional import cached_property
 from django.utils.timezone import now
 from django.utils.translation import ugettext_lazy as _
+from django.views.generic import DeleteView
 from django.views.generic import ListView, FormView
+from django.views.generic import View
 from pretix.base.models import CartPosition
 from pretix.base.models import Item
 from pretix.base.models import ItemVariation
 from pretix.base.models import Quota
 from pretix.base.services.cart import CartError
 from pretix.control.permissions import EventPermissionRequiredMixin
-
+from pretix.multidomain.urlreverse import build_absolute_uri
+from pretix.presale.utils import event_view
 from pretix_cartshare.forms import SharedCartForm, CartPositionFormSet
+
 from .models import SharedCart
 
 
@@ -27,7 +34,7 @@ class CartShareListView(EventPermissionRequiredMixin, ListView):
     permission = 'can_change_orders'
 
     def get_queryset(self):
-        qs = SharedCart.objects.filter(event=self.request.event, expires__gte=now())
+        qs = SharedCart.objects.filter(event=self.request.event, expires__gte=now()).order_by('-datetime')
         return qs
 
 
@@ -66,14 +73,17 @@ class CartShareCreateView(EventPermissionRequiredMixin, FormView):
             messages.error(self.request, _('Your input was invalid'))
             return self.get(self.request, *self.args, **self.kwargs)
 
-
         try:
             self.create_cart(form.instance, form.cleaned_data['expires'])
         except CartError as e:
             messages.error(self.request, str(e))
             return super().get(self.request, *self.args, **self.kwargs)
         else:
-            messages.success(self.request, _('The cart has been saved.'))
+            url = build_absolute_uri(self.request.event, 'plugins:pretix_cartshare:redeem', kwargs={
+                'id': form.instance.cart_id
+            })
+            messages.success(self.request, _('The cart has been saved. You can now share the following URL: '
+                                             '{url}').format(url=url))
             return super().form_valid(form)
 
     def create_cart(self, sc, expires):
@@ -106,7 +116,7 @@ class CartShareCreateView(EventPermissionRequiredMixin, FormView):
 
                 for quota, diff in quotas.items():
                     avail = quota.availability()
-                    if avail[0] != Quota.AVAILABILITY_OK or avail[1] < diff:
+                    if avail[0] != Quota.AVAILABILITY_OK or (avail[1] is not None and avail[1] < diff):
                         raise CartError(self.error_messages['quota'].format(name=quota.name))
 
                 sc.expires = expires
@@ -114,3 +124,38 @@ class CartShareCreateView(EventPermissionRequiredMixin, FormView):
                 sc.total = sum([p.price for p in positions])
                 sc.save()
                 CartPosition.objects.bulk_create(positions)
+
+
+class CartShareDeleteView(EventPermissionRequiredMixin, DeleteView):
+    model = SharedCart
+    template_name = 'pretixplugins/cartshare/delete.html'
+    permission = 'can_change_orders'
+    context_object_name = 'cart'
+
+    def get_object(self, queryset=None) -> SharedCart:
+        try:
+            return SharedCart.objects.get(
+                event=self.request.event,
+                cart_id=self.kwargs['id']
+            )
+        except SharedCart.DoesNotExist:
+            raise Http404(_("The requested shared cart does not exist."))
+
+    @transaction.atomic
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        success_url = self.get_success_url()
+        self.object.delete()
+        messages.success(request, _('The selected question has been deleted.'))
+        return HttpResponseRedirect(success_url)
+
+    def get_success_url(self):
+        return reverse('plugins:pretix_cartshare:list', kwargs={
+            'event': self.request.event.slug,
+            'organizer': self.request.organizer.slug,
+        })
+
+
+@method_decorator(event_view, name='dispatch')
+class RedeemView(View):
+    pass

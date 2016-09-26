@@ -1,0 +1,19 @@
+{% extends "pretixcontrol/event/base.html" %}
+{% load i18n %}
+{% load bootstrap3 %}
+{% block title %}{% trans "Delete shared cart" %}{% endblock %}
+{% block content %}
+	<h1>{% trans "Delete sharred cart" %}</h1>
+	<form action="" method="post" class="form-horizontal">
+		{% csrf_token %}
+		<p>{% blocktrans %}Are you sure you want to delete the shared cart <strong>{{ cart.cart_id }}</strong>?{% endblocktrans %}</p>
+		<div class="form-group submit-group">
+            <a href="{% url "plugins:pretix_cartshare:list" organizer=request.event.organizer.slug event=request.event.slug %}" class="btn btn-default btn-cancel">
+                {% trans "Cancel" %}
+            </a>
+            <button type="submit" class="btn btn-danger btn-save">
+                {% trans "Delete" %}
+            </button>
+		</div>
+	</form>
+{% endblock %}
