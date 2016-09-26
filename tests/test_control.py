@@ -1,13 +1,11 @@
-import pytest
 from datetime import timedelta
-
 from decimal import Decimal
+
+import pytest
 from django.utils.timezone import now
-from pretix.base.models import CartPosition
-from pretix.base.models import Event
-from pretix.base.models import EventPermission
-from pretix.base.models import Organizer
-from pretix.base.models import User
+from pretix.base.models import (
+    CartPosition, Event, EventPermission, Organizer, User,
+)
 from pretix_cartshare.models import SharedCart
 from pretix_cartshare.signals import clean_cart_positions
 

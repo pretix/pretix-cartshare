@@ -1,11 +1,9 @@
-import pytest
+from datetime import timedelta
 from decimal import Decimal
 
-from datetime import timedelta
+import pytest
 from django.utils.timezone import now
-from pretix.base.models import CartPosition
-from pretix.base.models import Event
-from pretix.base.models import Organizer
+from pretix.base.models import CartPosition, Event, Organizer
 from pretix_cartshare.models import SharedCart
 
 
@@ -45,5 +43,3 @@ def test_redeem_valid(client, env):
     cp.refresh_from_db()
     assert cp.cart_id != sc.cart_id
     assert cp.expires < now() + timedelta(days=1)
-
-
