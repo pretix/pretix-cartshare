@@ -1,6 +1,8 @@
 from django.conf.urls import url
 
-from .views import CartShareCreateView, CartShareListView, CartShareDeleteView, RedeemView
+from .views import (
+    CartShareCreateView, CartShareDeleteView, CartShareListView, RedeemView,
+)
 
 urlpatterns = [
     url(r'^control/event/(?P<organizer>[^/]+)/(?P<event>[^/]+)/cartshare/$',

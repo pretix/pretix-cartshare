@@ -1,7 +1,6 @@
 from django import forms
-from django.forms import formset_factory, BaseFormSet
+from django.forms import BaseFormSet, formset_factory
 from django.utils.translation import ugettext_lazy as _
-
 from pretix_cartshare.models import SharedCart
 
 

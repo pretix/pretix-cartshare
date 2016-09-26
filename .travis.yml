@@ -1,0 +1,19 @@
+language: python
+sudo: false
+python:
+    - "3.4"
+install:
+    - pip install -U pip wheel setuptools
+    - pushd ~
+    - git clone --depth 1 https://github.com/pretix/pretix.git
+    - cd pretix/src
+    - pip3 install -Ur requirements.txt -r requirements/py34.txt -r requirements/dev.txt
+    - python setup.py develop
+    - popd
+script:
+    - flake8 --ignore=E123,F403,F401,N802,C901,W503,E402 .
+    - isort -c -rc .
+    - coverage run -m py.test --rerun 5 tests && coveralls
+cache:
+    directories:
+        - $HOME/.cache/pip

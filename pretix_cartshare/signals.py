@@ -4,7 +4,6 @@ from django.utils.timezone import now
 from django.utils.translation import ugettext_lazy as _
 from pretix.base.signals import periodic_task
 from pretix.control.signals import nav_event
-
 from pretix_cartshare.models import SharedCart
 
 

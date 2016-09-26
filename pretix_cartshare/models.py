@@ -1,8 +1,7 @@
 from django.db import models
 from django.utils.crypto import get_random_string
 from django.utils.translation import ugettext_lazy as _
-from pretix.base.models import CartPosition
-from pretix.base.models import Event
+from pretix.base.models import CartPosition, Event
 
 
 def generate_cart_id():

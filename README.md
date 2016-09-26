@@ -1,9 +1,19 @@
 # pretix-cartshare
 
+[![Build Status](https://travis-ci.org/pretix/pretix-cartshare.svg?branch=master)](https://travis-ci.org/pretix/pretix-cartshare)
+[![Coverage Status](https://img.shields.io/coveralls/pretix/pretix-cartshare.svg)](https://coveralls.io/r/pretix/pretix-cartshare)
+
 pretix plugin that allows you to prepare a cart and share it with a customer.
 
+## Contributing
 
-## Development setup
+If you like to contribute to this project, you are very welcome to do so. If you have any
+questions in the process, please do not hesitate to ask us.
+
+Please note that we have a [Code of Conduct](https://docs.pretix.eu/en/latest/development/contribution/codeofconduct.html)
+in place that applies to all project contributions, including issues, pull requests, etc.
+
+### Development setup
 
 1. Make sure that you have a working
    [pretix development setup](https://docs.pretix.eu/en/latest/development/setup.html).
@@ -17,7 +27,7 @@ pretix plugin that allows you to prepare a cart and share it with a customer.
 
 4. Execute ``python setup.py develop`` within this directory to register this application with pretix's plugin registry.
 
-5. Restart your local pretix server. You can now use the plugins from this repository for your events!
+5. Restart your local pretix server. You can now use the plugin from this repository for your events!
 
 ## License
 
