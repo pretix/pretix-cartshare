@@ -141,6 +141,7 @@ class CartShareDeleteView(EventPermissionRequiredMixin, DeleteView):
     def delete(self, request, *args, **kwargs):
         self.object = self.get_object()
         success_url = self.get_success_url()
+        self.object.positions.delete()
         self.object.delete()
         messages.success(request, _('The selected question has been deleted.'))
         return HttpResponseRedirect(success_url)
@@ -159,25 +160,16 @@ class RedeemView(CartMixin, TemplateView):
     @cached_property
     def object(self):
         try:
-            return SharedCart.objects.get(event=self.request.event, cart_id=self.kwargs['id'])
+            return SharedCart.objects.get(
+                event=self.request.event,
+                cart_id=self.kwargs['id'],
+                expires__gte=now()
+            )
         except SharedCart.DoesNotExist:
             raise Http404()
 
-    @cached_property
-    def positions(self):
-        """
-        A list of this users cart position
-        """
-        return CartPosition.objects.filter(
-            cart_id=self.object.cart_id, event=self.request.event
-        ).order_by('item', 'variation').select_related(
-            'item', 'variation'
-        ).prefetch_related('item__questions', 'answers')
-
     def get_cart(self, answers=False, queryset=None, payment_fee=None, payment_fee_tax_rate=None):
-        queryset = queryset or CartPosition.objects.filter(
-            cart_id=self.object.cart_id, event=self.request.event,
-        )
+        queryset = self.object.positions
         return super().get_cart(answers, queryset, 0, 0)
 
     def get_context_data(self, **kwargs):
@@ -190,8 +182,6 @@ class RedeemView(CartMixin, TemplateView):
         now_dt = now()
         expiry = now_dt + timedelta(minutes=request.event.settings.get('reservation_time', as_type=int))
         with transaction.atomic():
-            CartPosition.objects.filter(
-                cart_id=self.object.cart_id, event=request.event
-            ).update(expires=expiry, cart_id=request.session.session_key)
+            self.object.positions.update(expires=expiry, cart_id=request.session.session_key)
             self.object.delete()
         return redirect(eventreverse(request.event, 'presale:event.checkout.start'))

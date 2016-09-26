@@ -32,12 +32,11 @@ class CartPositionForm(forms.Form):
         choices = []
         for i in event.items.prefetch_related('variations').filter(active=True):
             pname = i.name
-            if not i.is_available():
-                pname += ' ({})'.format(_('inactive'))
             variations = list(i.variations.all())
             if variations:
                 for v in variations:
-                    choices.append(('%d-%d' % (i.pk, v.pk), '%s – %s' % (pname, v.value)))
+                    if v.active:
+                        choices.append(('%d-%d' % (i.pk, v.pk), '%s – %s' % (pname, v.value)))
             else:
                 choices.append((str(i.pk), pname))
         self.fields['itemvar'].choices = choices

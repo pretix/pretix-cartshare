@@ -13,6 +13,7 @@ install:
 script:
     - flake8 --ignore=E123,F403,F401,N802,C901,W503,E402 .
     - isort -c -rc .
+    - python setup.py develop
     - coverage run -m py.test --rerun 5 tests && coveralls
 cache:
     directories:

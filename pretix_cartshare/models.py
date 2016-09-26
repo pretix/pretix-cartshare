@@ -31,4 +31,4 @@ class SharedCart(models.Model):
 
     @property
     def positions(self):
-        return CartPosition.objects.filter(cart_id=self.cart_id)
+        return CartPosition.objects.filter(cart_id=self.cart_id, event=self.event)

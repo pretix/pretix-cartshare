@@ -26,4 +26,5 @@ def navbar_info(sender, request, **kwargs):
 @receiver(signal=periodic_task)
 def clean_cart_positions(sender, **kwargs):
     for sc in SharedCart.objects.filter(expires__lt=now()):
+        sc.positions.delete()
         sc.delete()
