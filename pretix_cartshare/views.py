@@ -6,23 +6,20 @@ from django.core.urlresolvers import reverse
 from django.db import transaction
 from django.http import Http404
 from django.http import HttpResponseRedirect
+from django.shortcuts import redirect
 from django.utils.decorators import method_decorator
 from django.utils.functional import cached_property
 from django.utils.timezone import now
 from django.utils.translation import ugettext_lazy as _
-from django.views.generic import DeleteView
-from django.views.generic import ListView, FormView
-from django.views.generic import View
-from pretix.base.models import CartPosition
-from pretix.base.models import Item
-from pretix.base.models import ItemVariation
-from pretix.base.models import Quota
+from django.views.generic import ListView, FormView, DeleteView, TemplateView
+from pretix.base.models import CartPosition, Item, ItemVariation, Quota
 from pretix.base.services.cart import CartError
 from pretix.control.permissions import EventPermissionRequiredMixin
-from pretix.multidomain.urlreverse import build_absolute_uri
+from pretix.multidomain.urlreverse import build_absolute_uri, eventreverse
 from pretix.presale.utils import event_view
-from pretix_cartshare.forms import SharedCartForm, CartPositionFormSet
+from pretix.presale.views import CartMixin
 
+from .forms import SharedCartForm, CartPositionFormSet
 from .models import SharedCart
 
 
@@ -157,5 +154,45 @@ class CartShareDeleteView(EventPermissionRequiredMixin, DeleteView):
 
 
 @method_decorator(event_view, name='dispatch')
-class RedeemView(View):
-    pass
+class RedeemView(CartMixin, TemplateView):
+    template_name = 'pretixplugins/cartshare/redeem.html'
+
+    @cached_property
+    def object(self):
+        try:
+            return SharedCart.objects.get(event=self.request.event, cart_id=self.kwargs['id'])
+        except SharedCart.DoesNotExist:
+            raise Http404()
+
+    @cached_property
+    def positions(self):
+        """
+        A list of this users cart position
+        """
+        return CartPosition.objects.filter(
+            cart_id=self.object.cart_id, event=self.request.event
+        ).order_by('item', 'variation').select_related(
+            'item', 'variation'
+        ).prefetch_related('item__questions', 'answers')
+
+    def get_cart(self, answers=False, queryset=None, payment_fee=None, payment_fee_tax_rate=None):
+        queryset = queryset or CartPosition.objects.filter(
+            cart_id=self.object.cart_id, event=self.request.event,
+        )
+        return super().get_cart(answers, queryset, 0, 0)
+
+    def get_context_data(self, **kwargs):
+        ctx = super().get_context_data()
+        ctx['event'] = self.request.event
+        ctx['cart'] = self.get_cart()
+        return ctx
+
+    def post(self, request, *args, **kwargs):
+        now_dt = now()
+        expiry = now_dt + timedelta(minutes=request.event.settings.get('reservation_time', as_type=int))
+        with transaction.atomic():
+            CartPosition.objects.filter(
+                cart_id=self.object.cart_id, event=request.event
+            ).update(expires=expiry, cart_id=request.session.session_key)
+            self.object.delete()
+        return redirect(eventreverse(request.event, 'presale:event.checkout.start'))
