@@ -143,7 +143,7 @@ class CartShareDeleteView(EventPermissionRequiredMixin, DeleteView):
         success_url = self.get_success_url()
         self.object.positions.delete()
         self.object.delete()
-        messages.success(request, _('The selected question has been deleted.'))
+        messages.success(request, _('The selected cart has been deleted.'))
         return HttpResponseRedirect(success_url)
 
     def get_success_url(self):
