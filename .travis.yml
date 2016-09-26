@@ -9,6 +9,7 @@ install:
     - cd pretix/src
     - pip3 install -Ur requirements.txt -r requirements/py34.txt -r requirements/dev.txt
     - python setup.py develop
+    - make all compress
     - popd
 script:
     - flake8 --ignore=E123,F403,F401,N802,C901,W503,E402 .
