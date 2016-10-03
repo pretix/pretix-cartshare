@@ -2,24 +2,24 @@
 {% load i18n %}
 {% load eventurl %}
 
-{% block title %}{% trans "Shared carts" %}{% endblock %}
+{% block title %}{% trans "Share a cart" %}{% endblock %}
 
 {% block content %}
-    <h1>{% trans "Shared carts" %}</h1>
+    <h1>{% trans "Carts" %}</h1>
 
     {% if carts|length == 0 %}
         <div class="empty-collection">
             <p>
-                {% trans "No shared carts found." %}
+                {% trans "No carts found." %}
             </p>
 
             <a href="{% url "plugins:pretix_cartshare:create" organizer=request.event.organizer.slug event=request.event.slug %}"
-                    class="btn btn-primary btn-lg"><i class="fa fa-plus"></i> {% trans "Share a cart" %}</a>
+                    class="btn btn-primary btn-lg"><i class="fa fa-plus"></i> {% trans "Create a cart" %}</a>
         </div>
     {% else %}
         <p>
             <a href="{% url "plugins:pretix_cartshare:create" organizer=request.event.organizer.slug event=request.event.slug %}" class="btn
-btn-default"><i class="fa fa-plus"></i> {% trans "Share a new cart" %}
+btn-default"><i class="fa fa-plus"></i> {% trans "Create a new cart" %}
             </a>
         </p>
         <div class="table-responsive">
