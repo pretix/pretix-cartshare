@@ -15,7 +15,8 @@ class SharedCart(models.Model):
     )
     cart_id = models.CharField(
         max_length=255, default=generate_cart_id,
-        verbose_name=_("Cart ID")
+        verbose_name=_("Cart ID"),
+        db_index=True,
     )
     datetime = models.DateTimeField(
         verbose_name=_("Date"),
