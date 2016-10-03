@@ -54,12 +54,12 @@ msgstr "Gesamtbetrag"
 
 #: pretix_cartshare/signals.py:16
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:17
-msgid "Share a cart"
+msgid "Create a cart"
 msgstr "Warenkorb verschicken"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:6
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:9
-msgid "Create a shared cart"
+msgid "Create a cart"
 msgstr "Verschickbaren Warenkorb erstellen"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:17
@@ -76,7 +76,7 @@ msgstr "Speichern"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:4
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:6
-msgid "Delete shared cart"
+msgid "Delete cart"
 msgstr "Warenkorb löschen"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:9
@@ -95,17 +95,12 @@ msgstr "Abbrechen"
 msgid "Delete"
 msgstr "Löschen"
 
-#: pretix_cartshare/templates/pretixplugins/cartshare/list.html:5
-#: pretix_cartshare/templates/pretixplugins/cartshare/list.html:8
-msgid "Shared carts"
-msgstr "Warenkörbe"
-
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:13
-msgid "No shared carts found."
+msgid "No carts found."
 msgstr "Keine Warenkörbe gefunden."
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:22
-msgid "Share a new cart"
+msgid "Create a new cart"
 msgstr "Verschickbaren Warenkorb erstellen"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:31
