@@ -27,7 +27,10 @@ in place that applies to all project contributions, including issues, pull reque
 
 4. Execute ``python setup.py develop`` within this directory to register this application with pretix's plugin registry.
 
-5. Restart your local pretix server. You can now use the plugin from this repository for your events!
+5. Execute ``make`` within this directory to compile translations.
+
+6. Restart your local pretix server. You can now use the plugin from this repository for your events by enabling it in
+   the 'plugins' tab in the settings.
 
 ## License
 
