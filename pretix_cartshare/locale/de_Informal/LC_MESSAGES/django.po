@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-26 17:06+0200\n"
-"PO-Revision-Date: 2016-09-26 17:07+0200\n"
+"POT-Creation-Date: 2016-10-04 09:42+0200\n"
+"PO-Revision-Date: 2016-10-04 09:43+0200\n"
+"Last-Translator: Raphael Michel <michel@rami.io>\n"
+"Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Raphael Michel <michel@rami.io>\n"
-"Language-Team: \n"
 "X-Generator: Poedit 1.8.9\n"
 
 #: pretix_cartshare/forms.py:17
@@ -39,28 +39,29 @@ msgstr "Veranstaltung"
 msgid "Cart ID"
 msgstr "Warenkorb-ID"
 
-#: pretix_cartshare/models.py:21
+#: pretix_cartshare/models.py:22
 msgid "Date"
 msgstr "Datum"
 
-#: pretix_cartshare/models.py:25
+#: pretix_cartshare/models.py:26
 msgid "Expiration date"
 msgstr "Ablaufdatum"
 
-#: pretix_cartshare/models.py:28
+#: pretix_cartshare/models.py:29
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:30
 msgid "Total"
 msgstr "Gesamtbetrag"
 
 #: pretix_cartshare/signals.py:16
-#: pretix_cartshare/templates/pretixplugins/cartshare/list.html:17
-msgid "Create a cart"
+#: pretix_cartshare/templates/pretixplugins/cartshare/list.html:5
+msgid "Share a cart"
 msgstr "Warenkorb verschicken"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:6
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:9
+#: pretix_cartshare/templates/pretixplugins/cartshare/list.html:17
 msgid "Create a cart"
-msgstr "Verschickbaren Warenkorb erstellen"
+msgstr "Warenkorb erstellen"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:17
 msgid "Cart positions"
@@ -95,13 +96,17 @@ msgstr "Abbrechen"
 msgid "Delete"
 msgstr "Löschen"
 
+#: pretix_cartshare/templates/pretixplugins/cartshare/list.html:8
+msgid "Carts"
+msgstr "Warenkörbe"
+
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:13
 msgid "No carts found."
 msgstr "Keine Warenkörbe gefunden."
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:22
 msgid "Create a new cart"
-msgstr "Verschickbaren Warenkorb erstellen"
+msgstr "Warenkorb erstellen"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:31
 msgid "Created"
