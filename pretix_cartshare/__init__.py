@@ -1,5 +1,4 @@
 from django.apps import AppConfig
-from pretix.base.plugins import PluginType
 
 
 class CartshareApp(AppConfig):
@@ -12,7 +11,6 @@ class CartshareApp(AppConfig):
         description = 'Allows you to prepare a cart and share it with a customer.'
         visible = True
         version = '1.0'
-        type = PluginType.ADMINFEATURE
 
     def ready(self):
         from . import signals  # NOQA
