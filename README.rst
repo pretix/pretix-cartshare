@@ -1,7 +1,7 @@
 pretix-cartshare
 ================
 
-.. image:: https://img.shields.io/pypi/dm/pretix-cartshare.svg
+.. image:: https://img.shields.io/pypi/v/pretix-cartshare.svg
    :target: https://pypi.python.org/pypi/pretix-cartshare
 
 .. image:: https://travis-ci.org/pretix/pretix-cartshare.svg?branch=master
