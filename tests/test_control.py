@@ -4,7 +4,7 @@ from decimal import Decimal
 import pytest
 from django.utils.timezone import now
 from pretix.base.models import (
-    CartPosition, Event, EventPermission, Organizer, User,
+    CartPosition, Event, Organizer, Team, User,
 )
 from pretix_cartshare.models import SharedCart
 from pretix_cartshare.signals import clean_cart_positions
@@ -18,7 +18,9 @@ def env():
         date_from=now(), plugins='pretix_cartshare'
     )
     user = User.objects.create_user('dummy@dummy.dummy', 'dummy')
-    EventPermission.objects.create(user=user, event=event)
+    t = Team.objects.create(organizer=o, can_change_orders=True, can_view_orders=True)
+    t.members.add(user)
+    t.limit_events.add(event)
 
     ticket = event.items.create(default_price=Decimal('12'))
 
@@ -167,9 +169,9 @@ def test_delete_unknown(client, env):
 def test_require_permission(client, env):
     event, user, ticket = env
     client.login(email='dummy@dummy.dummy', password='dummy')
-    ep = EventPermission.objects.get(user=user, event=event)
-    ep.can_change_orders = False
-    ep.save()
+    t = Team.objects.get()
+    t.can_change_orders = False
+    t.save()
     r = client.get('/control/event/%s/%s/cartshare/' % (event.slug, event.organizer.slug))
     assert r.status_code == 403
     r = client.get('/control/event/%s/%s/' % (event.slug, event.organizer.slug))
