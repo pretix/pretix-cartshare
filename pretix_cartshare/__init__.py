@@ -10,7 +10,7 @@ class CartshareApp(AppConfig):
         author = 'Raphael Michel'
         description = 'Allows you to prepare a cart and share it with a customer.'
         visible = True
-        version = '1.0'
+        version = '1.1'
 
     def ready(self):
         from . import signals  # NOQA
