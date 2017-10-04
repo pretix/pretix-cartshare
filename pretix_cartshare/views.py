@@ -6,7 +6,6 @@ from django.core.urlresolvers import reverse
 from django.db import transaction
 from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import redirect
-from django.utils.decorators import method_decorator
 from django.utils.functional import cached_property
 from django.utils.timezone import now
 from django.utils.translation import ugettext_lazy as _
@@ -15,8 +14,8 @@ from pretix.base.models import CartPosition, Item, ItemVariation, Quota
 from pretix.base.services.cart import CartError
 from pretix.control.permissions import EventPermissionRequiredMixin
 from pretix.multidomain.urlreverse import build_absolute_uri, eventreverse
-from pretix.presale.utils import event_view
 from pretix.presale.views import CartMixin
+from pretix.presale.views.cart import get_or_create_cart_id
 
 from .forms import CartPositionFormSet, SharedCartForm
 from .models import SharedCart
@@ -153,7 +152,6 @@ class CartShareDeleteView(EventPermissionRequiredMixin, DeleteView):
         })
 
 
-@method_decorator(event_view, name='dispatch')
 class RedeemView(CartMixin, TemplateView):
     template_name = 'pretixplugins/cartshare/redeem.html'
 
@@ -181,7 +179,8 @@ class RedeemView(CartMixin, TemplateView):
     def post(self, request, *args, **kwargs):
         now_dt = now()
         expiry = now_dt + timedelta(minutes=request.event.settings.get('reservation_time', as_type=int))
+        cart_id = get_or_create_cart_id(request)
         with transaction.atomic():
-            self.object.positions.update(expires=expiry, cart_id=request.session.session_key)
+            self.object.positions.update(expires=expiry, cart_id=cart_id)
             self.object.delete()
         return redirect(eventreverse(request.event, 'presale:event.checkout.start'))
