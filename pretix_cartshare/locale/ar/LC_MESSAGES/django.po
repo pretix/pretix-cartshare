@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-06 16:59+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: pretix_cartshare/forms.py:17
+msgid "Count"
+msgstr ""
+
+#: pretix_cartshare/forms.py:21
+msgid "Product"
+msgstr ""
+
+#: pretix_cartshare/forms.py:26
+msgid "Price per item (empty for default)"
+msgstr ""
+
+#: pretix_cartshare/models.py:14
+msgid "Event"
+msgstr ""
+
+#: pretix_cartshare/models.py:18
+#: pretix_cartshare/templates/pretixplugins/cartshare/list.html:29
+msgid "Cart ID"
+msgstr ""
+
+#: pretix_cartshare/models.py:22
+msgid "Date"
+msgstr ""
+
+#: pretix_cartshare/models.py:26
+msgid "Expiration date"
+msgstr ""
+
+#: pretix_cartshare/models.py:29
+#: pretix_cartshare/templates/pretixplugins/cartshare/list.html:30
+msgid "Total"
+msgstr ""
+
+#: pretix_cartshare/signals.py:16
+#: pretix_cartshare/templates/pretixplugins/cartshare/list.html:5
+msgid "Share a cart"
+msgstr ""
+
+#: pretix_cartshare/templates/pretixplugins/cartshare/create.html:6
+#: pretix_cartshare/templates/pretixplugins/cartshare/create.html:9
+#: pretix_cartshare/templates/pretixplugins/cartshare/list.html:17
+msgid "Create a cart"
+msgstr ""
+
+#: pretix_cartshare/templates/pretixplugins/cartshare/create.html:17
+msgid "Cart positions"
+msgstr ""
+
+#: pretix_cartshare/templates/pretixplugins/cartshare/create.html:74
+msgid "Add a product"
+msgstr ""
+
+#: pretix_cartshare/templates/pretixplugins/cartshare/create.html:80
+msgid "Save"
+msgstr ""
+
+#: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:4
+#: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:6
+msgid "Delete cart"
+msgstr ""
+
+#: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:9
+#, python-format
+msgid ""
+"Are you sure you want to delete the shared cart <strong>%(cart.cart_id)s</"
+"strong>?"
+msgstr ""
+
+#: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:12
+msgid "Cancel"
+msgstr ""
+
+#: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:15
+msgid "Delete"
+msgstr ""
+
+#: pretix_cartshare/templates/pretixplugins/cartshare/list.html:8
+msgid "Carts"
+msgstr ""
+
+#: pretix_cartshare/templates/pretixplugins/cartshare/list.html:13
+msgid "No carts found."
+msgstr ""
+
+#: pretix_cartshare/templates/pretixplugins/cartshare/list.html:22
+msgid "Create a new cart"
+msgstr ""
+
+#: pretix_cartshare/templates/pretixplugins/cartshare/list.html:31
+msgid "Created"
+msgstr ""
+
+#: pretix_cartshare/templates/pretixplugins/cartshare/list.html:32
+msgid "Expires"
+msgstr ""
+
+#: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:6
+#: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:8
+msgid "Redeem a shared cart"
+msgstr ""
+
+#: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:14
+msgid "Shared cart"
+msgstr ""
+
+#: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:20
+#, python-format
+msgid ""
+"Click on the button to buy these items now. Please note that the button can "
+"only be clicked once. If you click it, you will need to confirm the order "
+"within %(minutes)s minutes and you will not be able to use this link again."
+msgstr ""
+
+#: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:28
+msgid "Add to my cart and buy"
+msgstr ""
+
+#: pretix_cartshare/views.py:41
+#, python-brace-format
+msgid ""
+"The quota {name} does not have enough capacity left to perform the operation."
+msgstr ""
+
+#: pretix_cartshare/views.py:68
+msgid "Your input was invalid"
+msgstr ""
+
+#: pretix_cartshare/views.py:80
+#, python-brace-format
+msgid "The cart has been saved. You can now share the following URL: {url}"
+msgstr ""
+
+#: pretix_cartshare/views.py:137
+msgid "The requested shared cart does not exist."
+msgstr ""
+
+#: pretix_cartshare/views.py:145
+msgid "The selected cart has been deleted."
+msgstr ""
