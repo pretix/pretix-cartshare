@@ -8,17 +8,21 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-06 16:59+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2018-03-19 11:02+0000\n"
+"Last-Translator: Matheus Nunes <matheus@integrate.com.br>\n"
+"Language-Team: Portuguese (Brazil) "
+"<https://translate.pretix.eu/projects/pretix/pretix-plugin-cartshare/pt_BR/>"
+"\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2.19.1\n"
 
 #: pretix_cartshare/forms.py:17
 msgid "Count"
-msgstr ""
+msgstr "Contagem"
 
 #: pretix_cartshare/forms.py:21
 msgid "Product"
@@ -30,7 +34,7 @@ msgstr ""
 
 #: pretix_cartshare/models.py:14
 msgid "Event"
-msgstr ""
+msgstr "Evento"
 
 #: pretix_cartshare/models.py:18
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:29
