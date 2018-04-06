@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-06 16:59+0100\n"
-"PO-Revision-Date: 2018-03-19 11:01+0000\n"
+"PO-Revision-Date: 2018-04-06 13:39+0000\n"
 "Last-Translator: Pieter Roziers <pieter@trippeltwiejenul.be>\n"
 "Language-Team: Dutch <https://translate.pretix.eu/projects/pretix/pretix-"
 "plugin-cartshare/nl/>\n"
@@ -29,7 +29,7 @@ msgstr "Product"
 
 #: pretix_cartshare/forms.py:26
 msgid "Price per item (empty for default)"
-msgstr ""
+msgstr "Prijs per artikel (standaard leeg)"
 
 #: pretix_cartshare/models.py:14
 msgid "Event"
@@ -38,7 +38,7 @@ msgstr "Evenement"
 #: pretix_cartshare/models.py:18
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:29
 msgid "Cart ID"
-msgstr ""
+msgstr "Winkelwagen ID"
 
 #: pretix_cartshare/models.py:22
 msgid "Date"
@@ -56,21 +56,21 @@ msgstr "Totaal"
 #: pretix_cartshare/signals.py:16
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:5
 msgid "Share a cart"
-msgstr ""
+msgstr "Deel een winkelwagen"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:6
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:9
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:17
 msgid "Create a cart"
-msgstr ""
+msgstr "Maak een winkelwagen aan"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:17
 msgid "Cart positions"
-msgstr ""
+msgstr "Winkelwagen posities"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:74
 msgid "Add a product"
-msgstr ""
+msgstr "Voeg een product toe"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:80
 msgid "Save"
@@ -79,7 +79,7 @@ msgstr "Opslaan"
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:4
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:6
 msgid "Delete cart"
-msgstr ""
+msgstr "Winkelwagen verwijderen"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:9
 #, python-format
@@ -87,43 +87,45 @@ msgid ""
 "Are you sure you want to delete the shared cart <strong>%(cart.cart_id)s</"
 "strong>?"
 msgstr ""
+"Ben je zeker dat je de gedeelde winkelwagen <strong>%(cart.cart_id)s</strong>"
+" wilt verwijderen?"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:12
 msgid "Cancel"
-msgstr ""
+msgstr "Annuleren"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:15
 msgid "Delete"
-msgstr ""
+msgstr "Verwijderen"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:8
 msgid "Carts"
-msgstr ""
+msgstr "Winkelwagens"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:13
 msgid "No carts found."
-msgstr ""
+msgstr "Geen winkelwagens gevonden."
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:22
 msgid "Create a new cart"
-msgstr ""
+msgstr "Maak een nieuwe winkelwagen aan"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:31
 msgid "Created"
-msgstr ""
+msgstr "Aangemaakt"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:32
 msgid "Expires"
-msgstr ""
+msgstr "Vervalt"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:6
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:8
 msgid "Redeem a shared cart"
-msgstr ""
+msgstr "Wissel een gedeelde winkelwagen in"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:14
 msgid "Shared cart"
-msgstr ""
+msgstr "Gedeelde winkelwagen"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:20
 #, python-format
@@ -132,30 +134,38 @@ msgid ""
 "only be clicked once. If you click it, you will need to confirm the order "
 "within %(minutes)s minutes and you will not be able to use this link again."
 msgstr ""
+"Klik op de knop om deze artikelen nu te kopen. Houd er rekening mee dat er "
+"op deze knop slecht éénmalig geklikt kan worden. Als je er op klikt, moet je "
+"de bestelling binnen %(minutes)s minutes bevestigen en kun je deze link niet "
+"opnieuw gebruiken."
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:28
 msgid "Add to my cart and buy"
-msgstr ""
+msgstr "Voeg toe aan mijn winkelwagen en reken af"
 
 #: pretix_cartshare/views.py:41
 #, python-brace-format
 msgid ""
 "The quota {name} does not have enough capacity left to perform the operation."
 msgstr ""
+"Het quotum {name} heeft niet genoeg beschikbare capaciteit om deze opdracht "
+"uit te voeren."
 
 #: pretix_cartshare/views.py:68
 msgid "Your input was invalid"
-msgstr ""
+msgstr "Jouw invoer was ongeldig"
 
 #: pretix_cartshare/views.py:80
 #, python-brace-format
 msgid "The cart has been saved. You can now share the following URL: {url}"
 msgstr ""
+"Jou winkelwagen werd opgeslagen. Je kan deze nu delen via de volgende URL: "
+"{url}"
 
 #: pretix_cartshare/views.py:137
 msgid "The requested shared cart does not exist."
-msgstr ""
+msgstr "De opgevraagde gedeelde winkelwagen bestaat niet."
 
 #: pretix_cartshare/views.py:145
 msgid "The selected cart has been deleted."
-msgstr ""
+msgstr "De geselecteerde winkelwagen werd verwijderd."
