@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-06 16:59+0100\n"
-"PO-Revision-Date: 2018-04-06 13:39+0000\n"
+"PO-Revision-Date: 2018-04-06 22:00+0000\n"
 "Last-Translator: Pieter Roziers <pieter@trippeltwiejenul.be>\n"
 "Language-Team: Dutch <https://translate.pretix.eu/projects/pretix/pretix-"
 "plugin-cartshare/nl/>\n"
@@ -46,7 +46,7 @@ msgstr "Datum"
 
 #: pretix_cartshare/models.py:26
 msgid "Expiration date"
-msgstr "Vervaldatum"
+msgstr "Verloopdatum"
 
 #: pretix_cartshare/models.py:29
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:30
