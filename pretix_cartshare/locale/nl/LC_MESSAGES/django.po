@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-06 16:59+0100\n"
-"PO-Revision-Date: 2018-04-06 22:00+0000\n"
-"Last-Translator: Pieter Roziers <pieter@trippeltwiejenul.be>\n"
+"PO-Revision-Date: 2018-05-03 17:00+0000\n"
+"Last-Translator: Maarten van den Berg <maartenberg1@gmail.com>\n"
 "Language-Team: Dutch <https://translate.pretix.eu/projects/pretix/pretix-"
 "plugin-cartshare/nl/>\n"
 "Language: nl\n"
@@ -87,8 +87,8 @@ msgid ""
 "Are you sure you want to delete the shared cart <strong>%(cart.cart_id)s</"
 "strong>?"
 msgstr ""
-"Ben je zeker dat je de gedeelde winkelwagen <strong>%(cart.cart_id)s</strong>"
-" wilt verwijderen?"
+"Weet u zeker dat u de gedeelde winkelwagen <strong>%(cart.cart_id)s</strong> "
+"wilt verwijderen?"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:12
 msgid "Cancel"
@@ -135,8 +135,8 @@ msgid ""
 "within %(minutes)s minutes and you will not be able to use this link again."
 msgstr ""
 "Klik op de knop om deze artikelen nu te kopen. Houd er rekening mee dat er "
-"op deze knop slecht éénmalig geklikt kan worden. Als je er op klikt, moet je "
-"de bestelling binnen %(minutes)s minutes bevestigen en kun je deze link niet "
+"op deze knop slechts éénmalig geklikt kan worden. Als u erop klikt moet u de "
+"bestelling binnen %(minutes)s minutens bevestigen en kun u deze link niet "
 "opnieuw gebruiken."
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:28
@@ -153,14 +153,13 @@ msgstr ""
 
 #: pretix_cartshare/views.py:68
 msgid "Your input was invalid"
-msgstr "Jouw invoer was ongeldig"
+msgstr "Uw invoer was ongeldig"
 
 #: pretix_cartshare/views.py:80
 #, python-brace-format
 msgid "The cart has been saved. You can now share the following URL: {url}"
 msgstr ""
-"Jou winkelwagen werd opgeslagen. Je kan deze nu delen via de volgende URL: "
-"{url}"
+"Uw winkelwagen is opgeslagen. U kunt deze nu delen via de volgende URL: {url}"
 
 #: pretix_cartshare/views.py:137
 msgid "The requested shared cart does not exist."
