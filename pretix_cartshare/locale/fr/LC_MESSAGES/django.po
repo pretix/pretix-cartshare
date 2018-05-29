@@ -5,81 +5,81 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-06 16:59+0100\n"
-"PO-Revision-Date: 2018-03-19 11:01+0000\n"
-"Last-Translator: Felix Rindt <felix@rindt.me>\n"
-"Language-Team: German <https://translate.pretix.eu/projects/pretix/pretix-"
-"plugin-cartshare/de/>\n"
-"Language: de\n"
+"PO-Revision-Date: 2018-04-08 02:00+0000\n"
+"Last-Translator: Claude <superoxyde@laposte.net>\n"
+"Language-Team: French <https://translate.pretix.eu/projects/pretix/pretix-"
+"plugin-cartshare/fr/>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 2.19.1\n"
 
 #: pretix_cartshare/forms.py:17
 msgid "Count"
-msgstr "Anzahl"
+msgstr "Compter"
 
 #: pretix_cartshare/forms.py:21
 msgid "Product"
-msgstr "Produkt"
+msgstr "Produit"
 
 #: pretix_cartshare/forms.py:26
 msgid "Price per item (empty for default)"
-msgstr "Einzelpreis (leer für Standardpreis)"
+msgstr ""
 
 #: pretix_cartshare/models.py:14
 msgid "Event"
-msgstr "Veranstaltung"
+msgstr "Événement"
 
 #: pretix_cartshare/models.py:18
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:29
 msgid "Cart ID"
-msgstr "Warenkorb-ID"
+msgstr ""
 
 #: pretix_cartshare/models.py:22
 msgid "Date"
-msgstr "Datum"
+msgstr "Date"
 
 #: pretix_cartshare/models.py:26
 msgid "Expiration date"
-msgstr "Ablaufdatum"
+msgstr "Date d'expiration"
 
 #: pretix_cartshare/models.py:29
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:30
 msgid "Total"
-msgstr "Gesamtbetrag"
+msgstr ""
 
 #: pretix_cartshare/signals.py:16
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:5
 msgid "Share a cart"
-msgstr "Warenkorb verschicken"
+msgstr ""
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:6
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:9
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:17
 msgid "Create a cart"
-msgstr "Warenkorb erstellen"
+msgstr ""
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:17
 msgid "Cart positions"
-msgstr "Produkte im Warenkorb"
+msgstr "Positions du panier"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:74
 msgid "Add a product"
-msgstr "Produkt hinzufügen"
+msgstr ""
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:80
 msgid "Save"
-msgstr "Speichern"
+msgstr ""
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:4
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:6
 msgid "Delete cart"
-msgstr "Warenkorb löschen"
+msgstr ""
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:9
 #, python-format
@@ -87,44 +87,43 @@ msgid ""
 "Are you sure you want to delete the shared cart <strong>%(cart.cart_id)s</"
 "strong>?"
 msgstr ""
-"Möchten Sie den Warenkorb <strong>%(cart.cart_id)s</strong> wirklich löschen?"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:12
 msgid "Cancel"
-msgstr "Abbrechen"
+msgstr ""
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:15
 msgid "Delete"
-msgstr "Löschen"
+msgstr ""
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:8
 msgid "Carts"
-msgstr "Warenkörbe"
+msgstr ""
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:13
 msgid "No carts found."
-msgstr "Keine Warenkörbe gefunden."
+msgstr ""
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:22
 msgid "Create a new cart"
-msgstr "Warenkorb erstellen"
+msgstr ""
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:31
 msgid "Created"
-msgstr "Erstellt"
+msgstr ""
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:32
 msgid "Expires"
-msgstr "Ablaufdatum"
+msgstr ""
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:6
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:8
 msgid "Redeem a shared cart"
-msgstr "Warenkorb verwenden"
+msgstr ""
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:14
 msgid "Shared cart"
-msgstr "Warenkorb"
+msgstr ""
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:20
 #, python-format
@@ -133,37 +132,30 @@ msgid ""
 "only be clicked once. If you click it, you will need to confirm the order "
 "within %(minutes)s minutes and you will not be able to use this link again."
 msgstr ""
-"Klicken Sie auf den Knopf um dieses Produkte jetzt zu kaufen. Bitte beachten "
-"Sie, dass dieser Knopf nur einmal betätigt werden kann. Wenn Sie ihn "
-"klicken, haben Sie %(minutes)s Minuten Zeit um die Bestellung durchzuführen "
-"und könnten den Knopf nicht noch einmal verwenden."
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:28
 msgid "Add to my cart and buy"
-msgstr "In den Warenkorb und kaufen"
+msgstr ""
 
 #: pretix_cartshare/views.py:41
 #, python-brace-format
 msgid ""
 "The quota {name} does not have enough capacity left to perform the operation."
 msgstr ""
-"Das Kontingent {name} hat nicht genug freie Kapazität für diese Änderung."
 
 #: pretix_cartshare/views.py:68
 msgid "Your input was invalid"
-msgstr "Ihre Eingabe war ungültig."
+msgstr ""
 
 #: pretix_cartshare/views.py:80
 #, python-brace-format
 msgid "The cart has been saved. You can now share the following URL: {url}"
 msgstr ""
-"Der Warenkorb wurde gespeichert. Sie können nun die folgende URL "
-"verschicken: {url}"
 
 #: pretix_cartshare/views.py:137
 msgid "The requested shared cart does not exist."
-msgstr "Der angeforderte Warenkorb existiert nicht."
+msgstr ""
 
 #: pretix_cartshare/views.py:145
 msgid "The selected cart has been deleted."
-msgstr "Der Warenkorb wurde gelöscht."
+msgstr ""
