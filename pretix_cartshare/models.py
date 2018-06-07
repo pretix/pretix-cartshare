@@ -10,7 +10,7 @@ def generate_cart_id():
 
 class SharedCart(models.Model):
     event = models.ForeignKey(
-        Event,
+        Event, on_delete=models.CASCADE,
         verbose_name=_("Event")
     )
     cart_id = models.CharField(
