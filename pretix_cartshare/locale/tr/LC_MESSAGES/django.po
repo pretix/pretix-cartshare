@@ -8,17 +8,20 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-06 16:59+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2018-07-17 22:01+0000\n"
+"Last-Translator: Yunus Fırat Pişkin <firat.piskin@idvlabs.com>\n"
+"Language-Team: Turkish <https://translate.pretix.eu/projects/pretix/"
+"pretix-plugin-cartshare/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.0.1\n"
 
 #: pretix_cartshare/forms.py:17
 msgid "Count"
-msgstr ""
+msgstr "Saymak"
 
 #: pretix_cartshare/forms.py:21
 msgid "Product"
@@ -30,7 +33,7 @@ msgstr ""
 
 #: pretix_cartshare/models.py:14
 msgid "Event"
-msgstr ""
+msgstr "Etkinlik"
 
 #: pretix_cartshare/models.py:18
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:29
@@ -71,7 +74,7 @@ msgstr ""
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:80
 msgid "Save"
-msgstr ""
+msgstr "Kayıt et"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:4
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:6
@@ -87,11 +90,11 @@ msgstr ""
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:12
 msgid "Cancel"
-msgstr ""
+msgstr "İptal et"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:15
 msgid "Delete"
-msgstr ""
+msgstr "Sil"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:8
 msgid "Carts"
