@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-06 16:59+0100\n"
-"PO-Revision-Date: 2018-07-18 21:00+0000\n"
+"PO-Revision-Date: 2018-07-19 20:00+0000\n"
 "Last-Translator: Yunus Fırat Pişkin <firat.piskin@idvlabs.com>\n"
 "Language-Team: Turkish <https://translate.pretix.eu/projects/pretix/"
 "pretix-plugin-cartshare/tr/>\n"
@@ -29,7 +29,7 @@ msgstr "Ürün"
 
 #: pretix_cartshare/forms.py:26
 msgid "Price per item (empty for default)"
-msgstr ""
+msgstr "Ürün başına fiyat (varsayılan olarak boş)"
 
 #: pretix_cartshare/models.py:14
 msgid "Event"
@@ -38,7 +38,7 @@ msgstr "Etkinlik"
 #: pretix_cartshare/models.py:18
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:29
 msgid "Cart ID"
-msgstr ""
+msgstr "Sepet Kimliği"
 
 #: pretix_cartshare/models.py:22
 msgid "Date"
@@ -46,31 +46,31 @@ msgstr "Tarih"
 
 #: pretix_cartshare/models.py:26
 msgid "Expiration date"
-msgstr ""
+msgstr "Son kullanma tarihi"
 
 #: pretix_cartshare/models.py:29
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:30
 msgid "Total"
-msgstr ""
+msgstr "Genel Toplam"
 
 #: pretix_cartshare/signals.py:16
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:5
 msgid "Share a cart"
-msgstr ""
+msgstr "Sepeti paylaş"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:6
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:9
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:17
 msgid "Create a cart"
-msgstr ""
+msgstr "Bir sepet oluştur"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:17
 msgid "Cart positions"
-msgstr ""
+msgstr "Sepet pozisyonları"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:74
 msgid "Add a product"
-msgstr ""
+msgstr "Bir ürün ekle"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:80
 msgid "Save"
@@ -79,7 +79,7 @@ msgstr "Kaydet"
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:4
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:6
 msgid "Delete cart"
-msgstr ""
+msgstr "Sepeti sil"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:9
 #, python-format
@@ -87,6 +87,8 @@ msgid ""
 "Are you sure you want to delete the shared cart <strong>%(cart.cart_id)s</"
 "strong>?"
 msgstr ""
+"Paylaşılan sepeti <strong>%(cart.cart_id)s</strong> silmek istediğinizden "
+"emin misiniz?"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:12
 msgid "Cancel"
@@ -97,33 +99,34 @@ msgid "Delete"
 msgstr "Sil"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:8
+#, fuzzy
 msgid "Carts"
-msgstr ""
+msgstr "Sepetler"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:13
 msgid "No carts found."
-msgstr ""
+msgstr "Sepet bulunamadı."
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:22
 msgid "Create a new cart"
-msgstr ""
+msgstr "Yeni bir sepet oluştur"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:31
 msgid "Created"
-msgstr ""
+msgstr "Oluşturuldu"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:32
 msgid "Expires"
-msgstr ""
+msgstr "Süre sonu"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:6
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:8
 msgid "Redeem a shared cart"
-msgstr ""
+msgstr "Paylaşılan bir sepeti kullan"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:14
 msgid "Shared cart"
-msgstr ""
+msgstr "Paylaşılan kart"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:20
 #, python-format
@@ -132,30 +135,34 @@ msgid ""
 "only be clicked once. If you click it, you will need to confirm the order "
 "within %(minutes)s minutes and you will not be able to use this link again."
 msgstr ""
+"Bu öğeleri şimdi satın almak için düğmeye tıklayın. Düğmenin sadece bir kez "
+"tıklanabilir olduğunu lütfen unutmayın. Tıklarsanız, siparişi %(minutes)s "
+"dakika içindedoğrulamanız gerekir ve bu bağlantıyı tekrar "
+"kullanamayacaksınız.."
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:28
 msgid "Add to my cart and buy"
-msgstr ""
+msgstr "Sepetim'e ekle ve satın al"
 
 #: pretix_cartshare/views.py:41
 #, python-brace-format
 msgid ""
 "The quota {name} does not have enough capacity left to perform the operation."
-msgstr ""
+msgstr "Kota {name} nın işlemi gerçekleştirmek için yeterli kapasitesi yok."
 
 #: pretix_cartshare/views.py:68
 msgid "Your input was invalid"
-msgstr ""
+msgstr "Girişiniz geçersiz"
 
 #: pretix_cartshare/views.py:80
 #, python-brace-format
 msgid "The cart has been saved. You can now share the following URL: {url}"
-msgstr ""
+msgstr "Sepet kaydedildi. Şimdi şu URL'yi paylaşabilirsiniz: {url}"
 
 #: pretix_cartshare/views.py:137
 msgid "The requested shared cart does not exist."
-msgstr ""
+msgstr "İstenen paylaşımlı sepet mevcut değil."
 
 #: pretix_cartshare/views.py:145
 msgid "The selected cart has been deleted."
-msgstr ""
+msgstr "Seçilen sepet silindi."
