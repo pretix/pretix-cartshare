@@ -2,10 +2,10 @@ from collections import Counter
 from datetime import timedelta
 
 from django.contrib import messages
-from django.urls import reverse
 from django.db import transaction
 from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import redirect
+from django.urls import reverse
 from django.utils.functional import cached_property
 from django.utils.timezone import now
 from django.utils.translation import ugettext_lazy as _
