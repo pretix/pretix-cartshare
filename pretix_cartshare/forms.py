@@ -62,6 +62,7 @@ class FormSet(BaseFormSet):
             auto_id=self.auto_id,
             prefix=self.add_prefix('__prefix__'),
             empty_permitted=True,
+            use_required_attribute=False,
             event=self.event
         )
         self.add_fields(form, None)
