@@ -16,7 +16,7 @@ script:
     - isort -c -rc .
     - python setup.py develop
     - make
-    - coverage run -m py.test --rerun 5 tests && coveralls
+    - coverage run -m py.test --reruns 5 tests && coveralls
 cache:
     directories:
         - $HOME/.cache/pip
