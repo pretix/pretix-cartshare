@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-06 16:59+0100\n"
-"PO-Revision-Date: 2018-07-19 20:00+0000\n"
+"PO-Revision-Date: 2018-08-17 21:00+0000\n"
 "Last-Translator: Yunus Fırat Pişkin <firat.piskin@idvlabs.com>\n"
 "Language-Team: Turkish <https://translate.pretix.eu/projects/pretix/"
 "pretix-plugin-cartshare/tr/>\n"
@@ -51,7 +51,7 @@ msgstr "Son kullanma tarihi"
 #: pretix_cartshare/models.py:29
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:30
 msgid "Total"
-msgstr "Genel Toplam"
+msgstr "Toplam"
 
 #: pretix_cartshare/signals.py:16
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:5
