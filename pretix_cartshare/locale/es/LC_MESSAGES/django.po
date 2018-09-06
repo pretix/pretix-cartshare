@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-06 16:59+0100\n"
-"PO-Revision-Date: 2018-08-28 14:00+0000\n"
+"PO-Revision-Date: 2018-09-11 15:59+0000\n"
 "Last-Translator: oocf <oswaldocerna@gmail.com>\n"
 "Language-Team: Spanish <https://translate.pretix.eu/projects/pretix/"
 "pretix-plugin-cartshare/es/>\n"
@@ -42,16 +42,16 @@ msgstr ""
 
 #: pretix_cartshare/models.py:22
 msgid "Date"
-msgstr ""
+msgstr "Fecha"
 
 #: pretix_cartshare/models.py:26
 msgid "Expiration date"
-msgstr ""
+msgstr "Fecha de expiración"
 
 #: pretix_cartshare/models.py:29
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:30
 msgid "Total"
-msgstr ""
+msgstr "Total"
 
 #: pretix_cartshare/signals.py:16
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:5
@@ -66,7 +66,7 @@ msgstr ""
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:17
 msgid "Cart positions"
-msgstr ""
+msgstr "Posiciones de la cesta"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:74
 msgid "Add a product"
@@ -142,6 +142,7 @@ msgstr ""
 msgid ""
 "The quota {name} does not have enough capacity left to perform the operation."
 msgstr ""
+"La cuota {name} no tiene suficiente capacidad para realizar la operación."
 
 #: pretix_cartshare/views.py:68
 msgid "Your input was invalid"
