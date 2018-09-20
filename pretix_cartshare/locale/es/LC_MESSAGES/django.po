@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-06 16:59+0100\n"
-"PO-Revision-Date: 2018-09-11 15:59+0000\n"
+"PO-Revision-Date: 2018-09-21 13:42+0000\n"
 "Last-Translator: oocf <oswaldocerna@gmail.com>\n"
 "Language-Team: Spanish <https://translate.pretix.eu/projects/pretix/"
 "pretix-plugin-cartshare/es/>\n"
@@ -29,7 +29,7 @@ msgstr "Producto"
 
 #: pretix_cartshare/forms.py:26
 msgid "Price per item (empty for default)"
-msgstr ""
+msgstr "Precio por item (vacio predeterminado)"
 
 #: pretix_cartshare/models.py:14
 msgid "Event"
@@ -38,7 +38,7 @@ msgstr "Evento"
 #: pretix_cartshare/models.py:18
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:29
 msgid "Cart ID"
-msgstr ""
+msgstr "ID del Cart"
 
 #: pretix_cartshare/models.py:22
 msgid "Date"
@@ -56,13 +56,13 @@ msgstr "Total"
 #: pretix_cartshare/signals.py:16
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:5
 msgid "Share a cart"
-msgstr ""
+msgstr "Compartir cart"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:6
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:9
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:17
 msgid "Create a cart"
-msgstr ""
+msgstr "Crear un cart"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:17
 msgid "Cart positions"
@@ -70,7 +70,7 @@ msgstr "Posiciones de la cesta"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:74
 msgid "Add a product"
-msgstr ""
+msgstr "Agregar producto"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:80
 msgid "Save"
@@ -79,7 +79,7 @@ msgstr "Guardar"
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:4
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:6
 msgid "Delete cart"
-msgstr ""
+msgstr "Eliminar cart"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:9
 #, python-format
@@ -98,23 +98,23 @@ msgstr "Eliminar"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:8
 msgid "Carts"
-msgstr ""
+msgstr "Carts"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:13
 msgid "No carts found."
-msgstr ""
+msgstr "No se encontraron carts."
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:22
 msgid "Create a new cart"
-msgstr ""
+msgstr "Crear un cart nuevo"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:31
 msgid "Created"
-msgstr ""
+msgstr "Creado"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:32
 msgid "Expires"
-msgstr ""
+msgstr "Expira"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:6
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:8
