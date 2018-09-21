@@ -10,7 +10,7 @@ from pretix_cartshare.models import SharedCart
 @receiver(nav_event, dispatch_uid='cartshare_nav')
 def navbar_info(sender, request, **kwargs):
     url = resolve(request.path_info)
-    if not request.user.has_event_permission(request.organizer, request.event, 'can_change_orders'):
+    if not request.user.has_event_permission(request.organizer, request.event, 'can_change_orders', request=request):
         return []
     return [{
         'label': _('Share a cart'),
