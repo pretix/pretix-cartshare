@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-06 16:59+0100\n"
-"PO-Revision-Date: 2018-09-21 13:42+0000\n"
+"PO-Revision-Date: 2018-11-07 21:28+0000\n"
 "Last-Translator: oocf <oswaldocerna@gmail.com>\n"
 "Language-Team: Spanish <https://translate.pretix.eu/projects/pretix/"
 "pretix-plugin-cartshare/es/>\n"
@@ -87,6 +87,8 @@ msgid ""
 "Are you sure you want to delete the shared cart <strong>%(cart.cart_id)s</"
 "strong>?"
 msgstr ""
+"Estás seguro que deseas eliminar el carrito compartido <strong> "
+"%(cart.cart_id)s</strong>?"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/delete.html:12
 msgid "Cancel"
@@ -98,7 +100,7 @@ msgstr "Eliminar"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:8
 msgid "Carts"
-msgstr "Carts"
+msgstr "Carritos"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:13
 msgid "No carts found."
@@ -119,11 +121,11 @@ msgstr "Expira"
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:6
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:8
 msgid "Redeem a shared cart"
-msgstr ""
+msgstr "Redimir un carrito compartido"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:14
 msgid "Shared cart"
-msgstr ""
+msgstr "Carrito compartido"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:20
 #, python-format
@@ -135,7 +137,7 @@ msgstr ""
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:28
 msgid "Add to my cart and buy"
-msgstr ""
+msgstr "Agregar a mi carrito y comprar"
 
 #: pretix_cartshare/views.py:41
 #, python-brace-format
@@ -146,17 +148,18 @@ msgstr ""
 
 #: pretix_cartshare/views.py:68
 msgid "Your input was invalid"
-msgstr ""
+msgstr "Tu entrada es inválida"
 
 #: pretix_cartshare/views.py:80
 #, python-brace-format
 msgid "The cart has been saved. You can now share the following URL: {url}"
 msgstr ""
+"Tu carrito ha sido guardado. Ahora puedes compartir el siguiente URL: {url}"
 
 #: pretix_cartshare/views.py:137
 msgid "The requested shared cart does not exist."
-msgstr ""
+msgstr "El carrito compartido solicitado no existe."
 
 #: pretix_cartshare/views.py:145
 msgid "The selected cart has been deleted."
-msgstr ""
+msgstr "El carrito selecionado ha sido eliminado."
