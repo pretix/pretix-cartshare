@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-06 16:59+0100\n"
-"PO-Revision-Date: 2018-11-07 21:28+0000\n"
+"PO-Revision-Date: 2018-12-08 11:08+0000\n"
 "Last-Translator: oocf <oswaldocerna@gmail.com>\n"
 "Language-Team: Spanish <https://translate.pretix.eu/projects/pretix/"
 "pretix-plugin-cartshare/es/>\n"
@@ -66,7 +66,7 @@ msgstr "Crear un cart"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:17
 msgid "Cart positions"
-msgstr "Posiciones de la cesta"
+msgstr "Posiciones del carrito"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/create.html:74
 msgid "Add a product"
