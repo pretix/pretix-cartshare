@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-06 16:59+0100\n"
-"PO-Revision-Date: 2018-03-19 11:02+0000\n"
-"Last-Translator: Matheus Nunes <matheus@integrate.com.br>\n"
+"PO-Revision-Date: 2018-06-05 04:00+0000\n"
+"Last-Translator: wallber azevedo pinheiro <wallpinheiro@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://translate.pretix.eu/projects/pretix/pretix-plugin-cartshare/pt_BR/>"
 "\n"
@@ -26,7 +26,7 @@ msgstr "Contagem"
 
 #: pretix_cartshare/forms.py:21
 msgid "Product"
-msgstr ""
+msgstr "Produto"
 
 #: pretix_cartshare/forms.py:26
 msgid "Price per item (empty for default)"
