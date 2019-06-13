@@ -2,6 +2,7 @@ from django.dispatch import receiver
 from django.urls import resolve, reverse
 from django.utils.timezone import now
 from django.utils.translation import ugettext_lazy as _
+from django_scopes import scopes_disabled
 from pretix.base.signals import periodic_task
 from pretix.control.signals import nav_event
 from pretix_cartshare.models import SharedCart
@@ -24,6 +25,7 @@ def navbar_info(sender, request, **kwargs):
 
 
 @receiver(signal=periodic_task)
+@scopes_disabled()
 def clean_cart_positions(sender, **kwargs):
     for sc in SharedCart.objects.filter(expires__lt=now()):
         sc.positions.delete()

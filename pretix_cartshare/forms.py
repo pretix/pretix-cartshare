@@ -1,6 +1,7 @@
 from django import forms
 from django.forms import BaseFormSet, formset_factory
 from django.utils.translation import ugettext_lazy as _
+from django_scopes import scopes_disabled
 from pretix_cartshare.models import SharedCart
 
 
@@ -27,6 +28,7 @@ class CartPositionForm(forms.Form):
 
     )
 
+    @scopes_disabled()
     def __init__(self, *args, event=None, **kwargs):
         super().__init__(*args, **kwargs)
         choices = []
