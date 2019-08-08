@@ -25,7 +25,7 @@ cmdclass = {
 
 setup(
     name='pretix-cartshare',
-    version='1.5',
+    version='1.6',
     description='pretix plugin to share carts',
     long_description=long_description,
     url='https://pretix.eu',
