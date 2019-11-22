@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-06 16:59+0100\n"
-"PO-Revision-Date: 2019-01-24 00:00+0000\n"
+"PO-Revision-Date: 2019-04-08 18:00+0000\n"
 "Last-Translator: Maarten van den Berg <maartenberg1@gmail.com>\n"
 "Language-Team: Dutch <https://translate.pretix.eu/projects/pretix/"
 "pretix-plugin-cartshare/nl/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.5.1\n"
 
 #: pretix_cartshare/forms.py:17
 msgid "Count"
@@ -29,7 +29,7 @@ msgstr "Product"
 
 #: pretix_cartshare/forms.py:26
 msgid "Price per item (empty for default)"
-msgstr "Prijs per artikel (standaard leeg)"
+msgstr "Prijs per artikel (laat leeg voor standaardprijs)"
 
 #: pretix_cartshare/models.py:14
 msgid "Event"
@@ -38,7 +38,7 @@ msgstr "Evenement"
 #: pretix_cartshare/models.py:18
 #: pretix_cartshare/templates/pretixplugins/cartshare/list.html:29
 msgid "Cart ID"
-msgstr "Winkelwagen ID"
+msgstr "Winkelwagen-ID"
 
 #: pretix_cartshare/models.py:22
 msgid "Date"
@@ -121,7 +121,7 @@ msgstr "Vervalt"
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:6
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:8
 msgid "Redeem a shared cart"
-msgstr "Wissel een gedeelde winkelwagen in"
+msgstr "Winkelwagen gebruiken"
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:14
 msgid "Shared cart"
@@ -134,14 +134,14 @@ msgid ""
 "only be clicked once. If you click it, you will need to confirm the order "
 "within %(minutes)s minutes and you will not be able to use this link again."
 msgstr ""
-"Klik op de knop om deze artikelen nu te kopen. Houd er rekening mee dat er "
-"op deze knop slechts éénmalig geklikt kan worden. Als u erop klikt moet u de "
-"bestelling binnen %(minutes)s minutens bevestigen en kun u deze link niet "
-"opnieuw gebruiken."
+"Klik op de knop om deze producten nu te kopen. Deze knop kan maar één keer "
+"gebruik worden. Als de knop wordt gebruikt moet de bestelling binnen "
+"%(minutes)s minuten afgerond worden, en kunt u deze link niet opnieuw "
+"gebruiken."
 
 #: pretix_cartshare/templates/pretixplugins/cartshare/redeem.html:28
 msgid "Add to my cart and buy"
-msgstr "Voeg toe aan mijn winkelwagen en reken af"
+msgstr "In winkelwagen en afrekenen"
 
 #: pretix_cartshare/views.py:41
 #, python-brace-format
@@ -159,7 +159,7 @@ msgstr "Uw invoer was ongeldig"
 #, python-brace-format
 msgid "The cart has been saved. You can now share the following URL: {url}"
 msgstr ""
-"Uw winkelwagen is opgeslagen. U kunt deze nu delen via de volgende URL: {url}"
+"De winkelwagen is opgeslagen. U kunt deze nu delen via de volgende URL: {url}"
 
 #: pretix_cartshare/views.py:137
 msgid "The requested shared cart does not exist."
@@ -167,4 +167,4 @@ msgstr "De opgevraagde gedeelde winkelwagen bestaat niet."
 
 #: pretix_cartshare/views.py:145
 msgid "The selected cart has been deleted."
-msgstr "De geselecteerde winkelwagen werd verwijderd."
+msgstr "De geselecteerde winkelwagen is verwijderd."
